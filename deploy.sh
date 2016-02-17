@@ -1,7 +1,7 @@
 #!/bin/bash
 
 main() {
-  echo "cap ${@}"
+  `cap ${@}`
 }
 
 main "${@}"
