@@ -2,6 +2,9 @@ FROM ruby:2.3.0
 
 ENV HOME /root
 
+RUN mkdir -p /azk/deploy
+WORKDIR /azk/deploy
+
 # install deps
 RUN apt-get update -qq && \
     apt-get install -y -qq ruby-dev make ssh && \
@@ -11,4 +14,5 @@ RUN apt-get update -qq && \
 # install capistrano
 RUN gem install --no-rdoc --no-ri capistrano -v 3.4.0
 
-WORKDIR /srv
+ENTRYPOINT ["/azk/deploy/deploy.sh"]
+CMD ["/azk/deploy/deploy.sh"]
