@@ -1,5 +1,4 @@
-# Capistrano image to be used with https://github.com/marmelab/make-docker-command
-FROM ubuntu:14.04
+FROM ruby:2.3.0
 
 ENV HOME /root
 
