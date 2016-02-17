@@ -10,6 +10,6 @@ RUN apt-get update -qq && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # install capistrano
-RUN gem install --no-rdoc --no-ri capistrano -v 3.2.1
+RUN gem install --no-rdoc --no-ri capistrano -v 3.4.0
 
 WORKDIR /srv
